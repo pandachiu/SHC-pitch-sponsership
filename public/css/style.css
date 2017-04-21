@@ -1,0 +1,19 @@
+.pitch {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+}
+.pitch_row {
+    display: flex;
+}
+.pitch__property {
+    background-image: linear-gradient(to bottom right, white, gray);
+    height: 10vw;
+    min-width: 10vw;
+}
+.pitch__property:nth-of-type(2n) {
+    background-image: linear-gradient(gray, black);
+}
+.pitch_row:nth-of-type(2n) {
+    flex-direction: row-reverse;
+}
