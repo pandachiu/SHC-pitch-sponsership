@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePropertyTable extends Migration
+class CreatePitchSectionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,12 @@ class CreatePropertyTable extends Migration
      */
     public function up()
     {
-        Schema::create('properties', function (Blueprint $table) {
+        Schema::create('pitch_sections', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('column');
-            $table->integer('row');
-            $table->integer('section_id');
-            $table->double('price');
-            $table->softDeletes();
+            $table->integer('row_start');
+            $table->integer('row_end');
+            $table->integer('column_start');
+            $table->integer('column_end');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreatePropertyTable extends Migration
      */
     public function down()
     {
-        Schema::drop('property');
+        Schema::drop('pitch_sections');
     }
 }
