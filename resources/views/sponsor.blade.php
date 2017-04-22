@@ -1,18 +1,16 @@
 @extends('layouts.master')
 
 @section('content')
-
-
 <div class="pitch">
-
-    @for ($i = 0; $i < 14; $i++)
-    <div class="pitch_row">
-        @for ($j = 0; $j < 12; $j++)
-            <div class="pitch__property"></div>
-        @endfor
-    </div>
-    @endfor
-
+    @foreach ($properties as $property_row)
+        <div class="row">
+            @foreach ($property_row as $property)
+                <div class="col-xs-1 pitch__property">
+                    {{ $property->id }}
+                </div>
+            @endforeach
+        </div>
+    @endforeach
 </div>
 @endsection
 

@@ -1,15 +1,21 @@
 .pitch {
-    display: flex;
-    flex-wrap: wrap;
-    width: 84vw;
-}
-.pitch_row {
-    display: flex;
 }
 .pitch__property {
     background-image: linear-gradient(to bottom right, white, gray);
-    height: 7vw;
-    min-width: 7vw;
+    position: relative;
+    text-align: center;
+}
+.pitch__property:before{
+    content: "";
+    display: block;
+    padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+.pitch__box{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 .pitch__property:nth-of-type(2n) {
     background-image: linear-gradient(gray, black);

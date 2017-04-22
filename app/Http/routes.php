@@ -22,3 +22,5 @@ Route::get('/about', function () {
 Route::get('/sponsor', function () {
     return view('sponsor');
 });
+
+Route::get('/pitch-section/{id}', 'PitchSectionController@display')->name('pitchSection');
