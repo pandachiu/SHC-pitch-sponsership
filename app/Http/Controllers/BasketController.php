@@ -23,21 +23,21 @@ class BasketController extends Controller
      */
     public function show()
     {
-        $cart = Basket::where('user_id', Auth::user()->id)->first();
+        $basket = Basket::where('user_id', Auth::user()->id)->first();
 
-        if (!$cart) {
-            $cart = new Basket();
-            $cart->user_id = Auth::user()->id;
-            $cart->save();
+        if (!$basket) {
+            $basket = new Basket();
+            $basket->user_id = Auth::user()->id;
+            $basket->save();
         }
 
-        $items = $cart->cartItems;
+        $basketitems = $basket->basketItems;
         $total = 0;
-        foreach ($items as $item) {
-            $total += $item->product->price;
+        foreach ($basketitems as $item) {
+            $total += $item->property->price;
         }
 
-        return view('cart.view', ['items' => $items, 'total' => $total]);
+        return view('basket', ['basketItems' => $basketitems, 'total' => $total]);
 
     }
 }

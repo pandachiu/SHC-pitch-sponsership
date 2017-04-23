@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <div class="col-sm-12 col-md-10 col-md-offset-1">
-        @isset($items)
+        @isset($basketItems)
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -15,21 +15,21 @@
                 </tr>
                 </thead>
             <tbody>
-            @foreach($items as $item)
+            @foreach($basketItems as $basketItem)
             <tr>
                 <td class="col-sm-8 col-md-6">
                     <div class="media">
                         <div class="media-body">
-                            <h4 class="media-heading"><a href="#">{{$item->property->name}}</a></h4>
+                            <h4 class="media-heading"><a href="#">{{$basketItem->property->name}}</a></h4>
                         </div>
                     </div>
                 </td>
                 <td class="col-sm-1 col-md-1" style="text-align: center">
                 </td>
                 <td class="col-sm-1 col-md-1 text-center"></td>
-                <td class="col-sm-1 col-md-1 text-center"><strong>${{$item->property->price}}</strong></td>
+                <td class="col-sm-1 col-md-1 text-center"><strong>${{$basketItem->property->price}}</strong></td>
                 <td class="col-sm-1 col-md-1">
-                    <a href="/removeItem/{{$item->id}}">
+                    <a href="/removeItem/{{$basketItem->id}}">
                         <button type="button" class="btn btn-danger">
                             <span class="fa fa-remove"></span> Remove
                         </button>
@@ -65,7 +65,7 @@
         </table>
         @endisset
 
-        @empty($items)
+        @empty($basketItems)
             <p>Please add at least one square of the pitch to sponsor.</p>
         @endempty
     </div>
