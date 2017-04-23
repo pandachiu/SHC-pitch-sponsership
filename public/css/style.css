@@ -1,25 +1,34 @@
 .pitch {
 }
+
 .pitch__property {
     background-image: linear-gradient(to bottom right, white, gray);
     position: relative;
     text-align: center;
 }
-.pitch__property:before{
+
+.pitch__property:before {
     content: "";
     display: block;
-    padding-top: 100%; 	/* initial ratio of 1:1*/
+    padding-top: 100%; /* initial ratio of 1:1*/
 }
-.pitch__box{
-    position:  absolute;
+
+.pitch__property--taken {
+    background: #F00;
+}
+
+.pitch__box {
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
 }
+
 .pitch__property:nth-of-type(2n) {
     background-image: linear-gradient(gray, black);
 }
+
 .pitch_row:nth-of-type(2n) {
     flex-direction: row-reverse;
 }
