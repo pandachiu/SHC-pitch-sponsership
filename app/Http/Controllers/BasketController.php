@@ -3,14 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Basket;
-use App\Http\Requests\Request;
-use App\Property;
 
 /**
  * Class PitchSectionController
  * @package App\Http\Controllers
  */
-class PitchSectionController extends Controller
+class BasketController extends Controller
 {
 
     public function __construct()
@@ -21,11 +19,9 @@ class PitchSectionController extends Controller
     /**
      * Show the profile for the given user.
      *
-     * @param  Request $request
-     * @param  int $id
-     * @return Response
+     * @return view
      */
-    public function show(Request $request)
+    public function show()
     {
         $cart = Basket::where('user_id', Auth::user()->id)->first();
 
