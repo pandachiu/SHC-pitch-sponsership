@@ -14,7 +14,7 @@ class CreateBasketTable extends Migration
     {
         Schema::create('baskets', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('propertyId');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ class CreateBasketTable extends Migration
      */
     public function down()
     {
-        Schema::drop('basket');
+        Schema::drop('baskets');
     }
 }
