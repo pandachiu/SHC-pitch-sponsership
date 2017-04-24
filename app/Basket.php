@@ -4,6 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class Basket
+ * @package App
+ */
 class Basket extends Model
 {
     public function user()
@@ -15,5 +19,4 @@ class Basket extends Model
     {
         return $this->hasMany('App\BasketItem');
     }
-
 }

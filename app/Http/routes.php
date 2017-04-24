@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::auth();
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,13 +26,11 @@ Route::get('/about', function () {
 Route::get('/sponsor', function () {
     return view('pitch');
 });
+Route::get('/pitch-section/{id}', 'Section@display')->name('pitchSection');
+Route::get('/square/{id}', 'SquareController@display')->name('square');
 
-Route::get('/pitch-section/{id}', 'PitchSectionController@display')->name('pitchSection');
-
-Route::get('/addProduct/{productId}', 'BasketController@addItem');
+//Route::get('/addProduct/{productId}', 'BasketController@addItem');
 Route::get('/removeItem/{productId}', 'BasketController@removeItem');
 Route::get('/basket', 'BasketController@show');
-
-Route::auth();
 
 Route::get('/home', 'HomeController@index');

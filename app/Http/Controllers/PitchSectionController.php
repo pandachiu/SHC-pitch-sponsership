@@ -22,6 +22,6 @@ class PitchSectionController extends Controller
             $ordered_properties[$property->row][] = $property;
         }
 
-        return view('sponsor', ['properties' => $ordered_properties]);
+        return view('pitchSection', ['properties' => $ordered_properties]);
     }
 }
