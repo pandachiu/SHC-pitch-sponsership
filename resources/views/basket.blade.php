@@ -3,17 +3,18 @@
 @section('content')
 <div class="row">
     <div class="col-sm-12 col-md-10 col-md-offset-1">
-        @isset($basketItems)
-        <table class="table table-hover">
+
+        @if (count($basketItems) > 1)
+            <table class="table table-hover">
             <thead>
-                <tr>
-                    <th>Product</th>
-                    <th></th>
-                    <th class="text-center"></th>
-                    <th class="text-center">Total</th>
-                    <th> </th>
-                </tr>
-                </thead>
+            <tr>
+                <th>Product</th>
+                <th></th>
+                <th class="text-center"></th>
+                <th class="text-center">Total</th>
+                <th> </th>
+            </tr>
+            </thead>
             <tbody>
             @foreach($basketItems as $basketItem)
             <tr>
@@ -50,10 +51,7 @@
                 <td></td>
                 <td></td>
                 <td>
-                    <a href="/"> <button type="button" class="btn btn-default">
-                            <span class="fa fa-shopping-cart"></span> Continue Shopping
-                        </button>
-                    </a>
+                    <a href="{{ route('sponsor') }}">Sponsor more pitch squares</a>
                 </td>
                 <td>
                     <button type="button" class="btn btn-success">
@@ -63,11 +61,13 @@
             </tr>
             </tbody>
         </table>
-        @endisset
+        @else
+            <p>Please add some Pitch Squares to sponsor. Please visit the
+                <a href="{{ route('sponsor') }}">Pitch</a>
+                to choose a square.
+            </p>
+        @endif
 
-        @empty($basketItems)
-            <p>Please add at least one square of the pitch to sponsor.</p>
-        @endempty
     </div>
 </div>
 @endsection

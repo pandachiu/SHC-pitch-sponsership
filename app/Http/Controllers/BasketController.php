@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Basket;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class PitchSectionController
@@ -31,8 +32,9 @@ class BasketController extends Controller
             $basket->save();
         }
 
-        $basketitems = $basket->basketItems;
+        $basketitems = ($basket->basketItems) ? $basket->basketItems : [];
         $total = 0;
+
         foreach ($basketitems as $item) {
             $total += $item->property->price;
         }

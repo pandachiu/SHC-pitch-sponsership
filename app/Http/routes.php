@@ -25,12 +25,11 @@ Route::get('/about', function () {
 
 Route::get('/sponsor', function () {
     return view('pitch');
-});
+})->name('sponsor');
+
 Route::get('/pitch-section/{id}', 'Section@display')->name('pitchSection');
 Route::get('/square/{id}', 'SquareController@display')->name('square');
 
 //Route::get('/addProduct/{productId}', 'BasketController@addItem');
 Route::get('/removeItem/{productId}', 'BasketController@removeItem');
 Route::get('/basket', 'BasketController@show');
-
-Route::get('/home', 'HomeController@index');
