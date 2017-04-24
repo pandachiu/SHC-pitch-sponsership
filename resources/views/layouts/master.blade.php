@@ -35,8 +35,12 @@
                     <li><a href="/sponsor">Sponsor</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    @if (Auth::check())
+                    <li><a href="/basket"><span class="fa fa-shopping-cart"></span> Basket</a></li>
+                    @else
                     <li><a href="/login">Login</a></li>
                     <li><a href="/register">Register</a></li>
+                    @endif
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

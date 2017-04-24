@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Property;
 
+/**
+ * Class PitchSectionController
+ * @package App\Http\Controllers
+ */
 class PitchSectionController extends Controller
 {
     /**
-     * Show the profile for the given user.
-     *
-     * @param  int  $id
-     * @return Response
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function display($id)
     {

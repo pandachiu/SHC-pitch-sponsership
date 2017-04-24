@@ -15,9 +15,6 @@ Route::auth();
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login', function () {
-    //return view('welcome');
-});
 
 Route::get('/about', function () {
     return view('about');
@@ -27,9 +24,9 @@ Route::get('/sponsor', function () {
     return view('pitch');
 })->name('sponsor');
 
-Route::get('/pitch-section/{id}', 'Section@display')->name('pitchSection');
-Route::get('/square/{id}', 'SquareController@display')->name('square');
+Route::get('/pitch-section/{id}', 'PitchSectionController@display')->name('pitchSection');
+Route::get('/square/{id}', 'SquareController@display')->name('square.display');
+Route::post('/square/{id}', 'SquareController@addToBasket')->name('square.add');
 
-//Route::get('/addProduct/{productId}', 'BasketController@addItem');
 Route::get('/removeItem/{productId}', 'BasketController@removeItem');
 Route::get('/basket', 'BasketController@show');

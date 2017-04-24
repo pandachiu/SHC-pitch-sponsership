@@ -3,7 +3,6 @@
 @section('content')
 <div class="row">
     <div class="col-sm-12 col-md-10 col-md-offset-1">
-
         @if (count($basketItems) > 1)
             <table class="table table-hover">
             <thead>
@@ -21,14 +20,14 @@
                 <td class="col-sm-8 col-md-6">
                     <div class="media">
                         <div class="media-body">
-                            <h4 class="media-heading"><a href="#">{{$basketItem->property->name}}</a></h4>
+                            <h4 class="media-heading"><a href="{{ route('square.display', ['id' => $basketItem->property->id]) }}">Square (co-ords {{$basketItem->property->column}}, {{$basketItem->property->row}})</a></h4>
                         </div>
                     </div>
                 </td>
                 <td class="col-sm-1 col-md-1" style="text-align: center">
                 </td>
                 <td class="col-sm-1 col-md-1 text-center"></td>
-                <td class="col-sm-1 col-md-1 text-center"><strong>${{$basketItem->property->price}}</strong></td>
+                <td class="col-sm-1 col-md-1 text-center"><strong>£{{$basketItem->property->price}}</strong></td>
                 <td class="col-sm-1 col-md-1">
                     <a href="/removeItem/{{$basketItem->id}}">
                         <button type="button" class="btn btn-danger">
@@ -51,7 +50,10 @@
                 <td></td>
                 <td></td>
                 <td>
-                    <a href="{{ route('sponsor') }}">Sponsor more pitch squares</a>
+                    <a href="{{ route('sponsor') }}"><button type="button" class="btn btn-default">
+                            <span class="fa fa-shopping-cart"></span> Sponsor more
+                        </button>
+                    </a>
                 </td>
                 <td>
                     <button type="button" class="btn btn-success">
@@ -64,7 +66,7 @@
         @else
             <p>Please add some Pitch Squares to sponsor. Please visit the
                 <a href="{{ route('sponsor') }}">Pitch</a>
-                to choose a square.
+                to sponsor a square.
             </p>
         @endif
 

@@ -32,7 +32,7 @@ class BasketController extends Controller
             $basket->save();
         }
 
-        $basketitems = ($basket->basketItems) ? $basket->basketItems : [];
+        $basketitems = ($basket->basketItem) ? $basket->basketItem : [];
         $total = 0;
 
         foreach ($basketitems as $item) {
