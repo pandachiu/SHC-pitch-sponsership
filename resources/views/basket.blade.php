@@ -1,9 +1,16 @@
 @extends('layouts.master')
 
 @section('content')
+
+@if (session('success'))
+<div class="alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+
 <div class="row">
     <div class="col-sm-12 col-md-10 col-md-offset-1">
-        @if (count($basketItems) > 1)
+        @if (count($basketItems) > 0)
             <table class="table table-hover">
             <thead>
             <tr>

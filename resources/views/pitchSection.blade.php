@@ -8,14 +8,14 @@
                 <div class="pitch__row">
                     @foreach ($property_row as $property)
                         @if ($property->is_available)
-                            <div class="pitch__property">
+                            <a class="pitch__property" href="{{ route('square.display', ['id' => $property->id]) }}">
                         @else
-                            <div class="pitch__property pitch__property--taken">
+                            <a class="pitch__property pitch__property--taken" href="{{ route('square.display', ['id' => $property->id]) }}">
                         @endif
-                            {{ $property->id }}
-                        </div>
+
+                        </a>
                     @endforeach
-                </div>
+                </a>
             @endforeach
             <div class="clearfix"></div>
         </div>

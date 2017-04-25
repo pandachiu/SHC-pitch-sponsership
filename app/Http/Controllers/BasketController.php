@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Basket;
+use App\BasketItem;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -12,6 +13,9 @@ use Illuminate\Support\Facades\Auth;
 class BasketController extends Controller
 {
 
+    /**
+     * BasketController constructor.
+     */
     public function __construct()
     {
         $this->middleware('auth');
@@ -40,6 +44,16 @@ class BasketController extends Controller
         }
 
         return view('basket', ['basketItems' => $basketitems, 'total' => $total]);
+    }
 
+    /**
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function removeItem($id)
+    {
+        BasketItem::destroy($id);
+
+        return redirect()->route('basket.display')->with('success', 'Item deleted from basket!');;
     }
 }

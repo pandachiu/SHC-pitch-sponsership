@@ -28,5 +28,5 @@ Route::get('/pitch-section/{id}', 'PitchSectionController@display')->name('pitch
 Route::get('/square/{id}', 'SquareController@display')->name('square.display');
 Route::post('/square/{id}', 'SquareController@addToBasket')->name('square.add');
 
-Route::get('/removeItem/{productId}', 'BasketController@removeItem');
-Route::get('/basket', 'BasketController@show');
+Route::get('/removeItem/{productId}', 'BasketController@removeItem')->name('basket.removeItem');
+Route::get('/basket', 'BasketController@show')->name('basket.display');
