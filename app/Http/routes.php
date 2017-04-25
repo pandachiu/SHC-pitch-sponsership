@@ -28,5 +28,13 @@ Route::get('/pitch-section/{id}', 'PitchSectionController@display')->name('pitch
 Route::get('/square/{id}', 'SquareController@display')->name('square.display');
 Route::post('/square/{id}', 'SquareController@addToBasket')->name('square.add');
 
-Route::get('/removeItem/{productId}', 'BasketController@removeItem')->name('basket.removeItem');
 Route::get('/basket', 'BasketController@show')->name('basket.display');
+Route::get('/removeItem/{productId}', 'BasketController@removeItem')->name('basket.removeItem');
+
+Route::get('/checkout', 'PaymentController@checkout')->name('checkout');
+Route::get('/processPayment', 'PaymentController@processPayment')->name('processPayment');
+
+Route::get('/thank-you', function () {
+    return view('thankYou');
+})->name('thankYou');
+

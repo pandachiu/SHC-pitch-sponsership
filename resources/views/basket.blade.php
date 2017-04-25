@@ -11,14 +11,14 @@
 <div class="row">
     <div class="col-sm-12 col-md-10 col-md-offset-1">
         @if (count($basketItems) > 0)
-            <table class="table table-hover">
+        <table class="table table-hover">
             <thead>
             <tr>
                 <th>Product</th>
                 <th></th>
                 <th class="text-center"></th>
                 <th class="text-center">Total</th>
-                <th> </th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -27,7 +27,8 @@
                 <td class="col-sm-8 col-md-6">
                     <div class="media">
                         <div class="media-body">
-                            <h4 class="media-heading"><a href="{{ route('square.display', ['id' => $basketItem->property->id]) }}">Square (co-ords {{$basketItem->property->column}}, {{$basketItem->property->row}})</a></h4>
+                            <h4 class="media-heading"><a href="{{ route('square.display', ['id' => $basketItem->property->id]) }}">Square (co-ords
+                                    {{$basketItem->property->column}}, {{$basketItem->property->row}})</a></h4>
                         </div>
                     </div>
                 </td>
@@ -57,24 +58,26 @@
                 <td></td>
                 <td></td>
                 <td>
-                    <a href="{{ route('sponsor') }}"><button type="button" class="btn btn-default">
+                    <a href="{{ route('sponsor') }}">
+                        <button type="button" class="btn btn-default">
                             <span class="fa fa-shopping-cart"></span> Sponsor more
                         </button>
                     </a>
                 </td>
-                <td>
-                    <button type="button" class="btn btn-success">
-                        Checkout <span class="fa fa-play"></span>
-                    </button>
+                <td><a href="{{ route('checkout') }}">
+                        <button type="button" class="btn btn-success">
+                            Checkout <span class="fa fa-play"></span>
+                        </button>
+                    </a>
                 </td>
             </tr>
             </tbody>
         </table>
         @else
-            <p>Please add some Pitch Squares to sponsor. Please visit the
-                <a href="{{ route('sponsor') }}">Pitch</a>
-                to sponsor a square.
-            </p>
+        <p>Please add some Pitch Squares to sponsor. Please visit the
+            <a href="{{ route('sponsor') }}">Pitch</a>
+            to sponsor a square.
+        </p>
         @endif
 
     </div>

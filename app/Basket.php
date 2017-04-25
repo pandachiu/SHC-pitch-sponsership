@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Basket
@@ -10,6 +11,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Basket extends Model
 {
+    use SoftDeletes;
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -24,5 +27,22 @@ class Basket extends Model
     public function basketItem()
     {
         return $this->hasMany('App\BasketItem');
+    }
+
+    /**
+     *
+     */
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($basket) {
+            // before delete() method call this
+
+            $basket->basketItem->each(function ($basketItem, $key) {
+                $basketItem->delete();
+            });
+            // do the rest of the cleanup...
+        });
     }
 }

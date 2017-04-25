@@ -17,6 +17,7 @@ class CreateBasketItemTable extends Migration
             $table->integer('basket_id');
             $table->integer('property_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
