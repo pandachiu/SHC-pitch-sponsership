@@ -2,7 +2,11 @@
 
 @section('content')
 <div class="row">
-    <div class="col-sm-9">
+    <div class="col-sm-10 col-sm-offset-1">
+        <h1>Pick a square</h1>
+
+        <p>Please pick a square below, the highlighted squares have already been chosen by a kind sponsor.</p>
+
         <div class="pitch">
             @foreach ($properties as $property_row)
                 <div class="pitch__row">

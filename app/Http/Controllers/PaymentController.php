@@ -168,6 +168,7 @@ class PaymentController extends Controller
     {
         foreach ($basketItems as $basketItem) {
             $basketItem->property->is_available = 0;
+            $basketItem->property->user_id = Auth::user()->id;
             $basketItem->property->save();
         }
     }

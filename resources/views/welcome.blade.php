@@ -2,29 +2,27 @@
 
 @section('content')
 <!-- Jumbotron -->
-<div class="jumbotron">
-    <h1>Marketing stuff!</h1>
-    <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-    <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
+<div class="jumbotron jumbotron--branded">
+    <h1>Sponsor Stafford Hockey Club</h1>
+    <p class="lead">After a 5 year battle for planning permission, SHC finally have succeeded. Help SHC fund their new astroturf pitch now!</p>
+    <p><a class="btn btn-lg btn-primary" href="{{ route('sponsor') }}" role="button">Sponsor us now</a></p>
 </div>
 
 <!-- Example row of columns -->
 <div class="row">
     <div class="col-md-4">
-        <h2>Safari bug warning!</h2>
-        <p class="text-danger">As of v9.1.2, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <h2>1. Register</h2>
+        <p>Sign up with our pitch sponsorship website and support your local hockey club now.</p>
+        <p><a class="btn btn-primary" href="/register   " role="button">Register &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <h2>2. Select</h2>
+        <p>Use our pitch navigator and choose one or more square of our pitch to sponsor. </p>
+        <p><a class="btn btn-primary" href="{{ route('sponsor') }}" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-        <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <h2>3. Sponsor</h2>
+        <p>Sponsor your chosen square(s) and you shall forever be immortalised online on this website as sponsoring Stafford Hockey's new astroturf pitch. It's yours forever!</p>
     </div>
 </div>
 @endsection

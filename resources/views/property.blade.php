@@ -20,11 +20,24 @@
     <li class="active">Square {{$property->id}}</li>
 </ul>
 
+
+<div class="panel panel-default">
+    <div class="panel-heading">Pitch information</div>
+    <div class="panel-body">
+        <p>Price : £{{ $property->price }}</p>
+    </div>
+</div>
+
+
 <div class="row">
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-heading">Sponsor Information</div>
             <div class="panel-body">
+                @if (count($property->user) === 1)
+                    <p>{{ $property->user->name }}</p>
+                    <p>{{ $property->user->signature }}</p>
+                @endif
             </div>
         </div>
     </div>
