@@ -30,6 +30,14 @@ class PropertyTableSeeder extends Seeder
             }
         }
 
-        Property::where('id', 1)->orWhere('id', 91)->orWhere('id', 4915)->orWhere('id', 5005)->update(['price' => '100.00']);
+        Property::where('id', 1)
+            ->orWhere('id', 91)
+            ->orWhere('id', 2505)
+            ->orWhere('id', 2506)
+            ->orWhere('id', 2596)
+            ->orWhere('id', 2597)
+            ->orWhere('id', 4915)
+            ->orWhere('id', 5005)
+            ->update(['price' => '100.00']);
     }
 }
