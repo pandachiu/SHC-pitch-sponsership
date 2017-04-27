@@ -11,7 +11,7 @@
             @for ($i = 0; $i < 4; $i++)
             <div class="pitch_row">
                 @for ($j = 1; $j <= 8; $j++)
-                    <a href="/pitch-section/{{ $j+(8*$i) }}" class="pitch__property"></a>
+                    <a href="/pitch-section/{{ $j+(8*$i) }}" class="pitch__section"></a>
                 @endfor
             </div>
             @endfor

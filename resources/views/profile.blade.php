@@ -9,10 +9,10 @@
                 {{ csrf_field() }}
 
                 <div class="form-group">
-                    <label for="signature" class="col-md-4 control-label">Signature</label>
+                    <label for="displayName" class="col-md-4 control-label">Display Name</label>
 
                     <div class="col-md-6">
-                        <textarea id="signature" class="form-control" name="signature">{{ $user->signature }}</textarea>
+                        <input type="text" id="displayName" class="form-control" name="display_name" maxlength="3" value="{{ $user->display_name }}">
                     </div>
                 </div>
 

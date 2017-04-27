@@ -29,12 +29,13 @@ class ProfileController extends Controller
     }
 
     /**
-     * @param $Request $request
+     * @param Request $request A request Object.
+     *
      * @return mixed
      */
     public function save(Request $request)
     {
-        Auth::user()->signature = $request->get('signature');
+        Auth::user()->display_name = $request->get('display_name');
         Auth::user()->save();
 
         return redirect()->route('profile.display')->with('success', 'Your Signature has been updated!');

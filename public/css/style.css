@@ -3,8 +3,20 @@
     background-repeat: no-repeat;
 }
 
+.pitch__section {
+    position: relative;
+    text-align: center;
+    border: 1px solid #000;
+    width: 12.5%;
+    float: left;
+}
+
+.pitch__section:before {
+    content: "";
+    display: block;
+    padding-top: 121%; /* initial ratio of 1:1*/
+}
 .pitch__property {
-    /*background-image: linear-gradient(to bottom right, white, gray);*/
     position: relative;
     text-align: center;
     border: 1px solid #000;
@@ -15,7 +27,7 @@
 .pitch__property:before {
     content: "";
     display: block;
-    padding-top: 121%; /* initial ratio of 1:1*/
+    padding-top: 100%; /* initial ratio of 1:1*/
 }
 
 .pitch__property--taken {
@@ -36,7 +48,7 @@
 
 .pitch__owner {
     font-size: 16px;
-    left: 25%;
+    left: 20%;
     position: absolute;
     top: 25%;
 }
@@ -119,4 +131,8 @@
 
 .navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar {
     background-color: #0E720F;
+}
+
+footer {
+    margin-top: 40px;
 }

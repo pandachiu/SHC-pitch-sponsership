@@ -18,7 +18,7 @@
                         @endif
 
                         @if (count($property->user) === 1)
-                            <span class="pitch__owner">{{ $property->user->signature }}</span>
+                            <span class="pitch__owner">{{ $property->user->display_name }}</span>
                         @endif
 
                         </a>
