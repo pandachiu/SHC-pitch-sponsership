@@ -17,6 +17,10 @@
                             <a class="pitch__property pitch__property--taken" href="{{ route('square.display', ['id' => $property->id]) }}">
                         @endif
 
+                        @if (count($property->user) === 1)
+                            <span class="pitch__owner">{{ $property->user->signature }}</span>
+                        @endif
+
                         </a>
                     @endforeach
                 </a>

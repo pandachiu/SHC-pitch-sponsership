@@ -34,6 +34,32 @@
     flex-direction: row-reverse;
 }
 
+.pitch__owner {
+    font-size: 16px;
+    left: 25%;
+    position: absolute;
+    top: 25%;
+}
+
+@media screen and (min-width: 25em) {
+    .pitch__owner {
+        font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+    }
+}
+
+/* Safari <8 and IE <11 */
+@media screen and (min-width: 25em) {
+    .pitch__owner {
+        font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .pitch__owner {
+        font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+    }
+}
+
 .btn-primary {
     background: #0E720F;
     border: none;
@@ -91,6 +117,6 @@
     background-color: #efec06;
 }
 
-.navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar{
+.navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar {
     background-color: #0E720F;
 }
