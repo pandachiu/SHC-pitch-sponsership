@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Property;
 
 class PropertyTableSeeder extends Seeder
 {
@@ -15,7 +16,6 @@ class PropertyTableSeeder extends Seeder
         foreach (range(1, 55) as $row) {
             foreach (range(1, 91) as $column) {
 
-                //$section = App\PitchSection::where('column_start', '>=', $column)->firstOrFail();
                 $section = App\PitchSection::where('column_start', '<=', $column)
                     ->where('column_end', '>=', $column)
                     ->where('row_start', '<=', $row)
@@ -29,5 +29,7 @@ class PropertyTableSeeder extends Seeder
                 ]);
             }
         }
+
+        Property::where('id', 1)->orWhere('id', 91)->orWhere('id', 4915)->orWhere('id', 5005)->update(['price' => '100.00']);
     }
 }

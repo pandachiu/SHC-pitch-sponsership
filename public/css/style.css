@@ -20,7 +20,7 @@
     position: relative;
     text-align: center;
     border: 1px solid #000;
-    width: 12.5%;
+    width: 8.33333%;
     float: left;
 }
 
@@ -41,12 +41,16 @@
     bottom: 0;
     right: 0;
 }
-
-.pitch_row:nth-of-type(2n) {
-    flex-direction: row-reverse;
+.pitch__row:after, .pitch__row:before {
+    display: table;
+    content: " ";
+}
+.pitch__row:after {
+    clear: both;
 }
 
 .pitch__owner {
+    color: #FFF;
     font-size: 16px;
     left: 20%;
     position: absolute;

@@ -23,7 +23,7 @@
 
                         </a>
                     @endforeach
-                </a>
+                </div>
             @endforeach
             <div class="clearfix"></div>
         </div>
