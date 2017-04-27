@@ -38,6 +38,6 @@ class PropertyTableSeeder extends Seeder
             ->orWhere('id', 2597)
             ->orWhere('id', 4915)
             ->orWhere('id', 5005)
-            ->update(['price' => '100.00']);
+            ->update(['price' => '100.00', 'highlight' => true]);
     }
 }

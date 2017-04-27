@@ -12,7 +12,11 @@
                 <div class="pitch__row">
                     @foreach ($property_row as $property)
                         @if ($property->is_available)
-                            <a class="pitch__property" href="{{ route('square.display', ['id' => $property->id]) }}">
+                            @if ($property->highlight)
+                                <a class="pitch__property pitch__property--highlight" href="{{ route('square.display', ['id' => $property->id]) }}">
+                            @else
+                                <a class="pitch__property" href="{{ route('square.display', ['id' => $property->id]) }}">
+                            @endif
                         @else
                             <a class="pitch__property pitch__property--taken" href="{{ route('square.display', ['id' => $property->id]) }}">
                         @endif

@@ -22,6 +22,13 @@
     border: 1px solid #000;
     width: 8.33333%;
     float: left;
+    background: repeating-linear-gradient(
+            90deg,
+            #39b54c,
+            #39b54c 10px,
+            #8cc63e 10px,
+            #8cc63e 20px
+    );
 }
 
 .pitch__property:before {
@@ -31,7 +38,23 @@
 }
 
 .pitch__property--taken {
-    background: #F00;
+    background: repeating-linear-gradient(
+            45deg,
+            #F00,
+            #F00 10px,
+            #ff7c7c 10px,
+            #ff7c7c 20px
+    );
+}
+
+.pitch__property--highlight {
+    background: repeating-linear-gradient(
+            45deg,
+            #606dbc,
+            #606dbc 10px,
+            #465298 10px,
+            #465298 20px
+    );
 }
 
 .pitch__box {

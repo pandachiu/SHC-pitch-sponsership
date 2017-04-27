@@ -20,6 +20,7 @@ class CreatePropertyTable extends Migration
             $table->double('price');
             $table->integer('user_id');
             $table->boolean('is_available')->default(true);
+            $table->boolean('highlight')->default(false);
             $table->softDeletes();
             $table->timestamps();
         });
