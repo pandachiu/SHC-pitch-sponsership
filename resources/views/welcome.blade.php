@@ -13,11 +13,11 @@
     <div class="col-md-4">
         <h2>1. Register</h2>
         <p>Sign up with our pitch sponsorship website and support your local hockey club now.</p>
-        <p><a class="btn btn-primary" href="/register   " role="button">Register &raquo;</a></p>
+        <p><a class="btn btn-primary" href="/register" role="button">Register &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>2. Select</h2>
-        <p>Use our pitch navigator and choose one or more square of our pitch to sponsor. </p>
+        <p>Use our pitch navigator and choose one or more squares of our pitch to sponsor. </p>
         <p><a class="btn btn-primary" href="{{ route('sponsor') }}" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-md-4">
