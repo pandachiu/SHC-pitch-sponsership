@@ -20,9 +20,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/sponsor', function () {
-    return view('pitch');
-})->name('sponsor');
+Route::get('/sponsor', 'PitchController@display')->name('sponsor');
 
 Route::get('/thank-you', function () {
     return view('thankYou');

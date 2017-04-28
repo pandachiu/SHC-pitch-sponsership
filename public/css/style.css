@@ -163,3 +163,24 @@
 footer {
     margin-top: 40px;
 }
+
+.goalmouth {
+    border: 1px solid #000;
+    content: " ";
+    display: block;
+    padding-top: 100%; /* initial ratio of 1:1*/
+    background: repeating-linear-gradient(
+            45deg,
+            #555,
+            #555 10px,
+            #ccc 10px,
+            #ccc 20px
+    );
+}
+
+@media screen and (min-width: 768px) {
+    .goalmouth {
+        margin-top: 18vw;
+        padding-top: 150%; /* initial ratio of 1:1*/
+    }
+}

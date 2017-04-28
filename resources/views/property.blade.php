@@ -43,17 +43,19 @@
     </div>
     <div class="col-sm-6">
         @if (Auth::check())
-        <div class="panel panel-default">
-            <div class="panel-heading">Add to basket</div>
-            <div class="panel-body">
-                <form action="{{ route('square.add', ['id' => $property->id]) }}" method="post">
-                    {{ csrf_field() }}
-                    <button type="submit" class="btn btn-success">
-                        Add to Basket <span class="fa fa-play"></span>
-                    </button>
-                </form>
-            </div>
-        </div>
+            @if (count($property->user) < 1)
+                <div class="panel panel-default">
+                    <div class="panel-heading">Add to basket</div>
+                    <div class="panel-body">
+                        <form action="{{ route('square.add', ['id' => $property->id]) }}" method="post">
+                            {{ csrf_field() }}
+                            <button type="submit" class="btn btn-success">
+                                Add to Basket <span class="fa fa-play"></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            @endif
         @else
         <div class="panel panel-default">
             <div class="panel-heading">Sign in</div>
