@@ -6,6 +6,7 @@
         <h1>Pick a square</h1>
 
         <p>Please pick a square below, the highlighted squares have already been chosen by a kind sponsor.</p>
+        <p><strong>Remember to edit your profile to have your initials on the your pitch square</strong></p>
 
         <div class="pitch">
             @foreach ($properties as $property_row)

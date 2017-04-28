@@ -6,7 +6,8 @@
     <div class="col-sm-10">
         <h1>Sponsor our pitch</h1>
 
-        <p>Please select an area of the pitch below.</p>
+        <p>Please select an area of the pitch below.
+        <p><strong>Remember to edit your profile to have your initials on the your pitch square</strong></p>
     </div>
 </div>
 <div class="row">
@@ -45,8 +46,6 @@
             @endfor
             <div class="clearfix"></div>
         </div>
-        <br />
-        <p><strong>Edit your profile to have your initials on the pitch square you sponsor!</strong></p>
     </div>
 </div>
 
