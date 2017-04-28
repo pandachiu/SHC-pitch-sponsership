@@ -17,6 +17,8 @@
             @endfor
             <div class="clearfix"></div>
         </div>
+
+        <p><strong>Edit your profile to have your initials on the pitch square you sponsor!</strong></p>
     </div>
 </div>
 
