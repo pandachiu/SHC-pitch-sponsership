@@ -6,8 +6,9 @@
     <div class="col-sm-10">
         <h1>Sponsor our pitch</h1>
 
-        <p>Please select an area of the pitch below.
-        <p><strong>Remember to edit your profile to have your initials on the your pitch square</strong></p>
+        <p>Please select an area of the pitch below.</p>
+        <p><strong>Remember to edit your profile to have your initials on the your pitch square</strong>.</p>
+        <p>For donations/sponsorships of over &pound;40, please email <a href="mailto:chairman@staffordhc.co.uk">chairman@staffordhc.co.uk</a>.</p>
     </div>
 </div>
 <div class="row">
