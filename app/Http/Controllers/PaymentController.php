@@ -33,8 +33,13 @@ class PaymentController extends Controller
         $this->middleware('auth');
         $this->apiContext = new ApiContext(
             new OAuthTokenCredential(
-                'AXn0JFRbFyt1SCiK2WGKIYFxN6_A2wmywIDngaFCuuoDgYvlKyEIBr6O-7GtCBOPzcjrsLXLmn3Rw6xr',     // ClientID
-                'EAlFxpy4KjbF3t2m_ly-bRGa7VCl6eioCqYT-oyb3XOXfhAfFekciJ2egI7RQ8kpL6R0vJxtShY2XHHU'      // ClientSecret
+                'Aaa-zk75Ix75Zwe2G3jxqnZXln8XfFEJJT0pDxBRynS2W0wv0KGzAxXz80qVIda2eWskqZQo3PbIFnQc',     // ClientID
+                'EMsBdpGJ3TdvlDT9oGdFd63q_n3S-PuJ1KDLoFqMwWjnrLB6juVVd928UqXWZIPlP3M_WsnBMptC73W2'      // ClientSecret
+            )
+        );
+        $this->apiContext->setConfig(
+            array(
+                'mode' => 'live'
             )
         );
     }
@@ -103,6 +108,7 @@ class PaymentController extends Controller
         try {
             $payment->create($this->apiContext);
         } catch (Exception $ex) {
+            echo $ex->getMessage();
 //            ResultPrinter::printError("Created Payment Using PayPal. Please visit the URL to Approve.", "Payment", null, $request, $ex);
             exit(1);
         }
