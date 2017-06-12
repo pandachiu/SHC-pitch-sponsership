@@ -9,7 +9,7 @@
         <p><strong>Remember to edit your profile to have your initials on the your pitch square</strong></p>
         <p>For donations/sponsorships of over &pound;40, please email <a href="mailto:chairman@staffordhc.co.uk">chairman@staffordhc.co.uk</a></p>
 
-        <div class="pitch">
+        <div class="pitch" style="background-image: url('/assets/pitch/{{ $sectionId }}.jpeg')">
             @foreach ($properties as $property_row)
                 <div class="pitch__row">
                     @foreach ($property_row as $property)

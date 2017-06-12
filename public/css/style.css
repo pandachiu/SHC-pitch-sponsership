@@ -17,11 +17,6 @@
     padding-top: 121%; /* initial ratio of 1:1*/
 }
 .pitch__property {
-    position: relative;
-    text-align: center;
-    border: 1px solid #000;
-    width: 8.33333%;
-    float: left;
     background: repeating-linear-gradient(
             90deg,
             #39b54c,
@@ -29,6 +24,12 @@
             #8cc63e 10px,
             #8cc63e 20px
     );
+    border: 1px solid #000;
+    float: left;
+    opacity: 0.5;
+    position: relative;
+    text-align: center;
+    width: 8.33333%;
 }
 
 .pitch__property:before {
