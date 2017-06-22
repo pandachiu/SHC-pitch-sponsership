@@ -12,7 +12,7 @@
 <div class="row">
     <div class="col-md-4">
         <h2>1. Register</h2>
-        <p>Sign up with our pitch sponsorship website and support your local hockey club now.</p>
+        <p>Sign up with our pitch sponsorship website and support your local hockey club now. Remember to set up your signature.</p>
         <p><a class="btn btn-primary" href="/register" role="button">Register &raquo;</a></p>
     </div>
     <div class="col-md-4">
@@ -22,7 +22,7 @@
     </div>
     <div class="col-md-4">
         <h2>3. Sponsor</h2>
-        <p>Sponsor your chosen square(s) and you shall forever be immortalised online on this website as sponsoring Stafford Hockey's new astroturf pitch. It's yours forever!</p>
+        <p>Sponsor your chosen square(s) and your account signature shall forever be immortalised online on this website as sponsoring Stafford Hockey's new astroturf pitch. It's yours forever! All squares bought by your account will all have the same signature.</p>
     </div>
 </div>
 @endsection
